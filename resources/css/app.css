@@ -1,0 +1,15 @@
+.qodef-position-right {
+    position: relative;
+    float: right;
+    z-index: 2;
+    height: 100%;
+    text-align: right;
+}
+
+
+.qodef-position-left {
+    position: relative;
+    float: left;
+    z-index: 2;
+    height: 100%;
+}

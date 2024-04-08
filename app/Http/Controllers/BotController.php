@@ -1,41 +1,97 @@
 <?php
 namespace App\Http\Controllers;
 
+use Telegram\Bot\Api;
+use Telegram\Bot\Actions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Telegram\Bot\Commands\Command;
+use Telegram\Bot\Laravel\Facades\Telegram;
+use Telegram\Bot\Exceptions\TelegramResponseException;
 
-class BotController extends Controller
+class BotController extends Command
 {
+
+    /*
     public function start()
     {
-        // The URL of your bot's endpoint
-        $botUrl = 'https://t.me/DIPODDI_bot';
+        $telegram = new Api('6747578183:AAESbpL8qJhKyzM0uhiGMTOpGRvQiShzCHU');
+        $response = $telegram->getMe();
 
-        // The choices or data you want to send to your bot
-        $data = [
-            'choice1' => '1',
-            // Add more choices as needed
-        ];
+        $this->replyWithMessage(['text' => 'Hello! Welcome to our bot, Here are our available commands:']);
 
-        // Send a POST request to the bot endpoint with the choices
-        $response = Http::post($botUrl . '/start', 1);
-        dd($response->body());
+        // This will update the chat status to typing...
+        $this->replyWithChatAction(['action' => Actions::TYPING]);
+        // Laravel
+        dd($telegram->getCommands());
 
-        // Check if the request was successful
-        if ($response->successful()) {
-            // Get the bot's response
-            $botResponse = $response->body();
+        $botId = $response->getId();
+        $firstName = $response->getFirstName();
+        $username = $response->getUsername();
+
+
+        /*
+        try {
             
-            // You can return this response to a view or just output it
-            return response()->json([
-                'message' => 'Bot interaction successful',
-                'botResponse' => $botResponse,
+            $bot=Telegram::setAccessToken("6747578183:AAESbpL8qJhKyzM0uhiGMTOpGRvQiShzCHU");
+            dd(Telegram::getBotConfig());
+            $response = Telegram::setMyCommands([
+                'chat_id' => 'DIPODDI_bot', // Corrected chat ID as integer
+                'text' => 'start',
+                'token' => '6747578183:AAESbpL8qJhKyzM0uhiGMTOpGRvQiShzCHU', // Replace with your bot token
             ]);
-        } else {
-            // Handle the error
-            return response()->json([
-                'error' => 'Failed to communicate with the bot',
-            ], 500);
+            
+            // Handle successful response
+            dd($response);
+        } catch (TelegramResponseException $e) {
+            // Handle Telegram API errors
+            dd($e);
+        } catch (\Exception $e) {
+            // Handle other exceptions
+            dd($e->getMessage());
         }
+    }
+    *        */
+
+     protected $name = "start";
+
+    /**
+     * @var string Command Description
+     */
+    protected $description = "Start Command to get you started";
+
+    /**
+     * @inheritdoc
+     */
+    public function handle($arguments)
+    {
+        // This will send a message using `sendMessage` method behind the scenes to
+        // the user/chat id who triggered this command.
+        // `replyWith<Message|Photo|Audio|Video|Voice|Document|Sticker|Location|ChatAction>()` all the available methods are dynamically
+        // handled when you replace `send<Method>` with `replyWith` and use the same parameters - except chat_id does NOT need to be included in the array.
+        $this->replyWithMessage(['text' => 'Hello! Welcome to our bot, Here are our available commands:']);
+
+        // This will update the chat status to typing...
+        $this->replyWithChatAction(['action' => Actions::TYPING]);
+
+        // This will prepare a list of available commands and send the user.
+        // First, Get an array of all registered commands
+        // They'll be in 'command-name' => 'Command Handler Class' format.
+        $commands = $this->getTelegram()->getCommands();
+
+        // Build the list
+        $response = '';
+        foreach ($commands as $name => $command) {
+            $response .= sprintf('/%s - %s' . PHP_EOL, $name, $command->getDescription());
+        }
+
+        // Reply with the commands list
+        $this->replyWithMessage(['text' => $response]);
+
+        // Trigger another command dynamically from within this command
+        // When you want to chain multiple commands within one or process the request further.
+        // The method supports second parameter arguments which you can optionally pass, By default
+        // it'll pass the same arguments that are received for this command originally.
+        $this->triggerCommand('subscribe');
     }
 }

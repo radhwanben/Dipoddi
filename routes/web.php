@@ -23,3 +23,8 @@ Route::get('/test',[BotController::class,'start']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::get('/programme-gratuit',function(){
+    return view('programmes.free');
+});
