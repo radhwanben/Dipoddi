@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BotController;
+use App\Http\Controllers\Programms\NutritionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/programme-gratuit',function(){
     return view('programmes.free');
 });
+
+Route::get('/programme-nutrition',[NutritionController::class,'index'])->middleware(['auth'])->name('Nutrition');
+Route::post('/programme-nutrition',[NutritionController::class,'store'])->middleware(['auth'])->name('SaveNutrition');

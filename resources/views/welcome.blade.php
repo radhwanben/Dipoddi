@@ -53,7 +53,7 @@
                     <div class="card-body text-center text-white">
                         <h3 class="card-title font-weight-bold mb-4">PROGRAMME GRATUIT</h3>
                         <p class="card-text mb-5">- Reçois gratuitement ton plan d'entraînement hebdomadaire en salle ou en extérieur.</p>
-                        <a href="/programme-gratuit" class="btn btn-danger btn-lg">COMMENCER <i class="bi bi-arrow-right ml-2"></i></a>
+                        <a href="{{ route('Nutrition') }}" class="btn btn-danger btn-lg">COMMENCER <i class="bi bi-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
