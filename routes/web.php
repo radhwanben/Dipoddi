@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\Programms\ProgramController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BotController;
 use App\Http\Controllers\Programms\NutritionController;
+use App\Http\Controllers\Programms\ProgramController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,19 +20,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test',[BotController::class,'start']);
+Route::get('/test', [BotController::class, 'start']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-Route::get('/programme-gratuit',function(){
+Route::get('/programme-gratuit', function () {
     return view('programmes.free');
 });
 
-Route::get('/programme-nutrition',[NutritionController::class,'index'])->middleware(['auth'])->name('Nutrition');
-Route::post('/programme-nutrition',[NutritionController::class,'store'])->middleware(['auth'])->name('SaveNutrition');
+Route::get('/programme-nutrition', [NutritionController::class, 'index'])->middleware(['auth'])->name('Nutrition');
+Route::post('/programme-nutrition', [NutritionController::class, 'store'])->name('SaveNutrition');
 
-
-Route::get('/programme-free',[ProgramController::class,'index']);
+Route::get('/programme-free', [ProgramController::class, 'index']);
