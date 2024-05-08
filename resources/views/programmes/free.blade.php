@@ -306,7 +306,7 @@
     <div class="progress-bar" id="progressBar"></div>
   </div>
   <div class="multistep-form">
-    <form id="multistepForm" action="{{ route('SaveNutrition') }}" method="post">
+    <form id="multistepForm" action="{{ route('sendProgram') }}" method="post">
       @csrf
       <fieldset id="step1" class="show">
         <div class="row card-deck" style="display: flex; justify-content: center; gap: 40px; margin-top: 50px;">
@@ -314,7 +314,7 @@
             <img src="https://dipoddi.com/wp-content/uploads/2022/06/football.png" class="card-img-top"
               style="padding:35px;border-bottom: inset;" alt="Program 1">
             <div class="card-body">
-              <h5 class="card-title">Programme 1</h5>
+              <h5 class="card-title">FOOTBALL</h5>
               <!-- <p class="card-text">Description of Program 1</p> -->
               <div class="radio-wrapper">
                 <input type="radio" name="program" value="program1" id="program1">
@@ -325,10 +325,10 @@
             </div>
           </div>
           <div class="card mb-3 col-md-3">
-            <img src="https://dipoddi.com/wp-content/uploads/2022/06/futsal.png" class="card-img-top"
+            <img src="https://dipoddi.com/wp-content/uploads/2022/06/musculation.png" class="card-img-top"
               style="padding:35px;border-bottom: inset;" alt="Program 2">
             <div class="card-body">
-              <h5 class="card-title">Programme 2</h5>
+              <h5 class="card-title">FITNESS</h5>
               <!-- <p class="text-muted">Description of Program 2</p> -->
               <div class="radio-wrapper">
                 <input type="radio" name="program" value="program2" id="program2">
@@ -339,10 +339,10 @@
             </div>
           </div>
           <div class="card mb-3 col-md-3">
-            <img src="https://dipoddi.com/wp-content/uploads/2022/06/musculation.png" class="card-img-top"
+            <img src="https://dipoddi.com/wp-content/uploads/2022/06/futsal.png " class="card-img-top"
               style="padding:35px;border-bottom: inset;" alt="Program 3">
             <div class="card-body">
-              <h5 class="card-title">Programme 3</h5>
+              <h5 class="card-title">FUTSAL</h5>
               <!-- <p class="text-muted">Description of Program 3</p> -->
               <div class="radio-wrapper">
                 <input type="radio" name="program" value="program3" id="program3">
@@ -570,7 +570,7 @@
             <div class="card-body">
               <h5 class="card-title">Program Salle</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Program Salle" id="gym" name="place">
+                <input type="radio" value="Program_Salle" id="gym" name="place">
                 <label for="gym">
                   <div class="tick_mark"></div>
                 </label>
@@ -583,7 +583,7 @@
             <div class="card-body">
               <h5 class="card-title">Program Maison</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Program Maison" id="home" name="place">
+                <input type="radio" value="Program_Maison" id="home" name="place">
                 <label for="home">
                   <div class="tick_mark"></div>
                 </label>
@@ -677,7 +677,7 @@
             <div class="card-body">
               <h5 class="card-title">ENDURANCE DE FORCE</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="endurance" id="endurance" name="target_muscule">
+                <input type="radio" value="Endurance de force" id="endurance" name="target_muscule">
                 <label for="endurance">
                   <div class="tick_mark"></div>
                 </label>
@@ -690,7 +690,7 @@
             <div class="card-body">
               <h5 class="card-title">FORCE MAX</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="force_max" id="force_max" name="target_muscule">
+                <input type="radio" value="Force max" id="force_max" name="target_muscule">
                 <label for="force_max">
                   <div class="tick_mark"></div>
                 </label>
@@ -703,7 +703,7 @@
             <div class="card-body">
               <h5 class="card-title">MASSE MUSCULAIRE</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="masse" id="masse" name="target_muscule">
+                <input type="radio" value="Masse musculaire" id="masse" name="target_muscule">
                 <label for="masse">
                   <div class="tick_mark"></div>
                 </label>
@@ -716,7 +716,7 @@
             <div class="card-body">
               <h5 class="card-title">PERTE DE POIDS</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="weightloss" id="weightloss" name="target_muscule">
+                <input type="radio" value="Perte de poids" id="weightloss" name="target_muscule">
                 <label for="weightloss">
                   <div class="tick_mark"></div>
                 </label>
@@ -731,7 +731,7 @@
             <div class="card-body">
               <h5 class="card-title">REMISE EN FORME</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="fitness" id="fitness" name="target_muscule">
+                <input type="radio" value="Remise en forme" id="fitness" name="target_muscule">
                 <label for="fitness">
                   <div class="tick_mark"></div>
                 </label>
@@ -745,7 +745,7 @@
             <div class="card-body">
               <h5 class="card-title">RÉPÉTITIONS DES EFFORTS</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="effort_repeitition" id="effort_repeitition" name="target_muscule">
+                <input type="radio" value="Répétitions des efforts" id="effort_repeitition" name="target_muscule">
                 <label for="effort_repeitition">
                   <div class="tick_mark"></div>
                 </label>
@@ -758,7 +758,7 @@
             <div class="card-body">
               <h5 class="card-title">FORCE EXPLOSIVE</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="explosive_force" id="explosive_force" name="target_muscule">
+                <input type="radio" value="Force explosive" id="explosive_force" name="target_muscule">
                 <label for="explosive_force">
                   <div class="tick_mark"></div>
                 </label>

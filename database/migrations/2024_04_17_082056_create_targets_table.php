@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('targets', function (Blueprint $table) {
             $table->id();
             $table->string('target_description')->nullable();
-            $table->foreignId('program_id')->constrained('programs')->onDelete('cascade');
+            $table->unsignedBigInteger('program_id');
+            $table->foreign('program_id')->references('id')->on('programs');
             $table->timestamps();
         });
     }
