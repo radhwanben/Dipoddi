@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
             $table->string('program_name');
-            $table->foreignId('program_type_id')->constrained('program_types')->onDelete('cascade');
+            $table->unsignedBigInteger('program_type_id'); // Add program_type_id column
+            $table->foreign('program_type_id')->references('id')->on('program_types');
             $table->timestamps();
         });
     }

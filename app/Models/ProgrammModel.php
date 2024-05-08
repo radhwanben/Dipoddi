@@ -15,7 +15,7 @@ class ProgrammModel extends Model
         'program_name',
     ];
 
-    public function ProgramTyope()
+    public function ProgramType()
     {
         $this->belongsTo(ProgramType::class);
     }

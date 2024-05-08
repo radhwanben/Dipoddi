@@ -16,7 +16,8 @@ return new class extends Migration
             $table->text('template_content');
             $table->boolean('status');
             $table->integer('nb_days');
-            $table->foreignId('target_id')->constrained('targets')->onDelete('cascade');
+            $table->unsignedBigInteger('target_id');
+            $table->foreign('target_id')->references('id')->on('targets');
             $table->timestamps();
         });
     }

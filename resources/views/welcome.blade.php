@@ -249,7 +249,7 @@ input[type="radio"]:checked+.slider-item+.slider-dots label {
             <h3 class="card-title font-weight-bold mb-4">PROGRAMME GRATUIT</h3>
             <p class="card-text mb-5">- Reçois gratuitement ton plan d'entraînement hebdomadaire en salle ou en
               extérieur.</p>
-            <a href="{{ route('Nutrition') }}" class="btn btn-danger btn-lg">COMMENCER <i
+            <a href="{{ route('freeProgram') }}" class="btn btn-danger btn-lg">COMMENCER <i
                 class="bi bi-arrow-right ml-2"></i></a>
           </div>
         </div>
@@ -287,7 +287,7 @@ input[type="radio"]:checked+.slider-item+.slider-dots label {
         <p class="lead">Effectue tes séances sur mesure et atteins tes objectifs où que tu sois.</p>
       </div>
       <div class="py-10" style="text-align-last: center;">
-        <a href="{{ route('Nutrition') }}" class="btn btn-danger btn-lg">
+        <a href="{{ route('freeProgram') }}" class="btn btn-danger btn-lg">
           COMMENCER
           <i class="bi bi-arrow-right ml-2"></i></a>
       </div>
@@ -304,7 +304,7 @@ input[type="radio"]:checked+.slider-item+.slider-dots label {
       <div class="col-lg-6 col-sm-6 col-xs-6" style="height=360px">
         <div style="margin-top:20px;">
           <div class="qodef-position-left">
-            <a class="navbar-brand" href="{{ route('home') }}">
+            <a class="navbar-brand" href="/">
               <img src="{{ Vite::asset('resources/images/small_logo.png') }}"
                 style="width: 6em;height: 4em;margin-left: 2em; margin-bottom: 1em;" class="img-fluid" alt="Logo">
             </a>
