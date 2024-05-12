@@ -271,25 +271,25 @@ input[type="radio"]:checked+.slider-item+.slider-dots label {
   </div>
 </div>
 <div class="container-fluid"
-  style="background-image:url('https://dipoddi.com/wp-content/uploads/2022/07/Rayures.png');  height: 700px;">
-  <div class="row justify-content-center">
+  style="background-image:url('https://dipoddi.com/wp-content/uploads/2022/07/Rayures.png'); height: 100vh;">
+  <div class="row justify-content-center align-items-center" style="height: 100%;">
     <!-- Video section -->
-    <div class="col-md-4" style="margin-top: 80px">
-      <video width="100%" height="100%" controls autoplay muted loop>
+    <div class="col-md-4 col-sm-12 mb-4">
+      <video width="80%" controls autoplay muted loop>
         <source src="{{ Vite::asset('resources/video/vedioframe.mp4') }}" type="video/mp4">
       </video>
     </div>
     <!-- Text section -->
-    <div class="col-md-4" style="height:500px; margin-top: 80px">
-      <div class="text-center py-10" style="text-align-last: right;">
-        <h1 class="display-5 text-uppercase" style="font-weight: bold; text-align: -webkit-right;">PROGRAMMES
-          D'ENTRAÎNEMENT À DOMICILE</h1>
+    <div class="col-md-4 col-sm-12 mb-4">
+      <div class="text-center py-4">
+        <h1 class="display-5 text-uppercase" style="font-weight: bold;">PROGRAMMES D'ENTRAÎNEMENT À DOMICILE</h1>
         <p class="lead">Effectue tes séances sur mesure et atteins tes objectifs où que tu sois.</p>
       </div>
-      <div class="py-10" style="text-align-last: center;">
+      <div class="text-center py-4">
         <a href="{{ route('freeProgram') }}" class="btn btn-danger btn-lg">
           COMMENCER
-          <i class="bi bi-arrow-right ml-2"></i></a>
+          <i class="bi bi-arrow-right ml-2"></i>
+        </a>
       </div>
     </div>
   </div>
