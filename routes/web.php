@@ -32,6 +32,10 @@ Route::get('/programme-gratuit', function () {
     return view('programmes.free');
 })->name('freeProgram');
 
+Route::get('/programme-kine', function () {
+    return view('programmes.kine');
+})->name('kineProgram');
+
 Route::post('/programme-gratuit', [ProgramController::class, 'sendProgram'])->middleware('auth')->name('sendProgram');
 
 Route::get('/thanks', function () {

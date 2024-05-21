@@ -262,7 +262,7 @@ input[type="radio"]:checked+.slider-item+.slider-dots label {
             <h3 class="card-title font-weight-bold mb-4">PROGRAMME KINE</h3>
             <p class="card-text mb-5">- Bénéficie chaque semaine de ton plan kiné avec des exercices de mobilité et de
               renforcement.</p>
-            <a href="/programme-gratuit" class="btn btn-danger btn-lg">COMMENCER <i
+            <a href="{{ route('kineProgram') }}" class="btn btn-danger btn-lg">COMMENCER <i
                 class="bi bi-arrow-right ml-2"></i></a>
           </div>
         </div>

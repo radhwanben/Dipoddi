@@ -387,13 +387,11 @@ function toggleCheckbox(id) {
       @include('programmes.steps.step-2')
       @include('programmes.steps.step-3')
       @include('programmes.steps.step-4')
-      @include('programmes.steps.step-5')
+      @include('programmes.steps.step-5-kine')
       @include('programmes.steps.step-6')
-      @include('programmes.steps.step-7')
-      @include('programmes.steps.step-8')
-      @include('programmes.steps.step-9')
       <button type="submit" class="submit-btn btn btn-dark btn-lg btn-block" style="display: none;"
         id="btn_submit">Soumettre</button>
+
     </form>
     <!-- Modal -->
     <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel"
@@ -438,6 +436,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+
+
   const progressBar = document.getElementById("progressBar");
   const steps = document.querySelectorAll("fieldset");
   const previousBtns = document.querySelectorAll(".previousStep");
@@ -477,7 +477,6 @@ document.addEventListener("DOMContentLoaded", function() {
             current = lastStep - back;
             caseThree = 0;
             caseFour = 1
-            console.log("wsol");
           } else if (caseFour) {
             back = 4
             steps[lastStep - back].classList.add('show');
@@ -511,6 +510,7 @@ document.addEventListener("DOMContentLoaded", function() {
         steps[current].classList.remove('show');
         lastStep = current;
         current++;
+        console.log(current);
         if (current < steps.length) {
           if (current === 3) {
             const ouiChecked = document.getElementById('yes').checked;
@@ -524,53 +524,12 @@ document.addEventListener("DOMContentLoaded", function() {
               caseOne = 1
               noChecked = 1
               noCheckedTwo = 1
-            }
-          } else if (current === 5) {
-            const gymChecked = document.getElementById('gym').checked;
-            const outdoorsChecked = document.getElementById('outdoors').checked;
-            console.log(outdoorsChecked)
-            if (gymChecked) {
-              steps[5].classList.add('show');
-              steps[5].style.display = "block";
-              const previousStepBtn = document.querySelector('.prevFive');
-              const initialStepBtn = document.querySelector('.initialStep');
-              console.log(caseOne);
-              if (noChecked) {
-                previousStepBtn.style.display = "none";
-                initialStepBtn.style.display = "block";
-                noChecked = 0;
-              } else {
-                previousStepBtn.style.display = "block";
-                initialStepBtn.style.display = "none";
-              }
-            } else if (outdoorsChecked) {
-              steps[8].classList.add('show');
-              steps[8].style.display = "block";
-            } else {
-              steps[7].classList.add('show');
-              steps[7].style.display = "block";
-            }
-          } else if (current === 6) {
-            const musculation = document.getElementById('musculation').checked;
-            if (musculation) {
-              steps[6].classList.add('show');
-              steps[6].style.display = "block";
-              const previousStepBtnSix = document.querySelector('.prevSix');
-              const initialStepBtnSix = document.querySelector('.initialStepSix');
-              if (noCheckedTwo) {
-                previousStepBtnSix.style.display = "none";
-                initialStepBtnSix.style.display = "block";
-                noCheckedTwo = 0;
-              } else {
-                previousStepBtnSix.style.display = "block";
-                initialStepBtnSix.style.display = "none";
-              }
 
-            } else {
-              document.getElementById("btn_submit").click();
             }
-          } else if (current == 7) {
+          }
+          if (current === 5) {
             document.getElementById("btn_submit").click();
+
           } else {
             steps[current].classList.add('show');
             steps[current].style.display = "block";

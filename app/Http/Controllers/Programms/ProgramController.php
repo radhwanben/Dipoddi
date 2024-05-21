@@ -26,7 +26,6 @@ class ProgramController extends Controller
 
     public function sendProgram(Request $request)
     {
-        // dd($request->get('days'));
         $programType = $request->get('place');
         $program = $request->get('type');
         $targetName = $request->get('target_muscule');
