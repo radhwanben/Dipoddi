@@ -1,4 +1,4 @@
-      <fieldset id="step7 " style="display: none;">
+      <fieldset id="step7 ">
         <div class="col card-deck text-center mt-5">
           <h2>PRÉFÉREZ-VOUS CIBLER UN GROUPE MUSCULAIRE SPÉCIFIQUE OU TRAVAILLER L'ENSEMBLE DU CORPS ?</h2>
         </div>
@@ -99,8 +99,6 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn previousStep prevSix"
-          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;display: none;">Précédent</button>
-        <button type="button" class="btn initialStep initialStepSix"
-          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;display: none">Répéter</button>
+        <button type="button" class="btn previousStep"
+          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;">Précédent</button>
       </fieldset>

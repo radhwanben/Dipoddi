@@ -1,4 +1,4 @@
-      <fieldset id="step9" style="display: none;">
+      <fieldset id="step5" class="step-5">
         <div class="col card-deck text-center mt-5">
           <h2>CHOISSEZ VOTRE TYPE D'EXERCICE</h2>
         </div>
@@ -9,7 +9,7 @@
             <div class="card-body">
               <h5 class="card-title">Cardio</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Perte de poids" id="cardio_home" name="target_cardio_home">
+                <input type="radio" value="Perte de poids" id="cardio_home" name="Program_Outdoor">
                 <label for="cardio_home">
                   <div class="tick_mark"></div>
                 </label>
@@ -22,7 +22,7 @@
             <div class="card-body">
               <h5 class="card-title">Renfercement</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Renfercement" id="renfercement" name="target_renfercement">
+                <input type="radio" value="Renfercement" id="renfercement" name="Program_Outdoor">
                 <label for="renfercement">
                   <div class="tick_mark"></div>
                 </label>
@@ -35,7 +35,7 @@
             <div class="card-body">
               <h5 class="card-title">Brûler des calories</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Repetition des efforts" id="brulerCalorie" name="target_bruler">
+                <input type="radio" value="Repetition des efforts" id="brulerCalorie" name="Program_Outdoor">
                 <label for="brulerCalorie">
                   <div class="tick_mark"></div>
                 </label>
@@ -43,8 +43,6 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn previousStep prevSix"
-          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;display: none;">Précédent</button>
-        <button type="button" class="btn initialStep initialStepSix"
-          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;display: none">Répéter</button>
+        <button type="button" class="btn previousStep"
+          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;">Précédent</button>
       </fieldset>

@@ -1,5 +1,5 @@
-      <fieldset id="step6" style="display: none;">
-        <div class="col text-center mt-5">
+      <fieldset id="step5" class="step-5">
+        <div class=" col text-center mt-5">
           <h2>QUEL TYPE D'ENTRAÎNEMENT PRÉFÉREZ-VOUS?</h2>
         </div>
         <div class="row card-deck" style="display: flex; justify-content: center; gap: 40px; margin-top: 50px;">
@@ -7,7 +7,7 @@
             <img src="https://test.dipoddi.com/static/myapp/images/programmes/icons/musculation%20en%20salle.png"
               class="card-img-top" alt="Program 1" style="padding:35px;border-bottom: inset;">
             <div class="card-body">
-              <h5 class="card-title">MUSCULATION</h5>
+              <h5 class="card-title">MUSCULATION222</h5>
               <div class="radio-wrapper">
                 <input type="radio" value="Musculation en Salle" id="musculation" name="type">
                 <label for="musculation">
@@ -62,8 +62,6 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn previousStep prevFive"
-          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;display: none;">Précédent</button>
-        <button type="button" class="btn initialStep"
-          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;display: none">Répéter</button>
+        <button type="button" class="btn previousStep"
+          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;">Précédent</button>
       </fieldset>

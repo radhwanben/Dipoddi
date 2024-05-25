@@ -1,4 +1,4 @@
-      <fieldset id="step8" style="display: none;">
+      <fieldset id="step6">
         <div class="col card-deck text-center mt-5">
           <h2>CHOISSEZ VOTRE TYPE D'EXERCICE</h2>
         </div>
@@ -9,7 +9,7 @@
             <div class="card-body">
               <h5 class="card-title">Perte de poids</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Perte de poids" id="perte_poids" name="perte_de_poids">
+                <input type="radio" value="Perte de poids" id="perte_poids" name="Program_DEHORS">
                 <label for="perte_poids">
                   <div class="tick_mark"></div>
                 </label>
@@ -22,7 +22,7 @@
             <div class="card-body">
               <h5 class="card-title">Puissance</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Puissance" id="puissance" name="target_puissance">
+                <input type="radio" value="Puissance" id="puissance" name="Program_DEHORS">
                 <label for="puissance">
                   <div class="tick_mark"></div>
                 </label>
@@ -35,7 +35,7 @@
             <div class="card-body">
               <h5 class="card-title">Répetitions des efforts</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Repetition des efforts" id="repitionDesEfforts" name="target_repitition">
+                <input type="radio" value="Repetition des efforts" id="repitionDesEfforts" name="Program_DEHORS">
                 <label for="repitionDesEfforts">
                   <div class="tick_mark"></div>
                 </label>
@@ -48,7 +48,7 @@
             <div class="card-body">
               <h5 class="card-title">Box to box</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Box to box" id="boxTobox" name="target_box">
+                <input type="radio" value="Box to box" id="boxTobox" name="Program_DEHORS">
                 <label for="boxTobox">
                   <div class="tick_mark"></div>
                 </label>
@@ -63,7 +63,7 @@
             <div class="card-body">
               <h5 class="card-title">REMISE EN FORME</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Remise en forme" id="remiseEnForme" name="target_remise">
+                <input type="radio" value="Remise en forme" id="remiseEnForme" name="Program_DEHORS">
                 <label for="remiseEnForme">
                   <div class="tick_mark"></div>
                 </label>
@@ -71,8 +71,6 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn previousStep prevSix"
-          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;display: none;">Précédent</button>
-        <button type="button" class="btn initialStep initialStepSix"
-          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;display: none">Répéter</button>
+        <button type="button" class="btn previousStep"
+          style="background-color:  #f34e3a;float: left;border-radius: initial;color: #fff;height: 45px;width: 150px;">Précédent</button>
       </fieldset>

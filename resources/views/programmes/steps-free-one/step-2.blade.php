@@ -8,7 +8,7 @@
           <div class="col d-flex justify-content-center" style="gap: 10px;">
             <div class="card col-3 " onclick="toggleCheckbox('monday')">
               <div class="card-body" style="height: 120px;">
-                <p class="card-title">Lundi</p>
+                <p class="card-title" style="color:black;">Lundi</p>
                 <div class="checkbox-wrapper-10">
                   <input type="checkbox" value="monday" id="monday" name="days[]">
                   <label for="monday">
@@ -19,7 +19,7 @@
             </div>
             <div class="card col-3 " onclick="toggleCheckbox('tuesday')">
               <div class="card-body">
-                <p class="card-title">Mardi</p>
+                <p class="card-title" style="color:black;">Mardi</p>
                 <div class="checkbox-wrapper-10">
                   <input type="checkbox" value="tuesday" id="tuesday" name="days[]">
                   <label for="tuesday">
@@ -30,7 +30,7 @@
             </div>
             <div class="card col-3" onclick="toggleCheckbox('wednesday')">
               <div class="card-body">
-                <p class="card-title">Mercredi</p>
+                <p class="card-title" style="color:black;">Mercredi</p>
                 <div class="checkbox-wrapper-10">
                   <input type="checkbox" value="wednesday" id="wednesday" name="days[]">
                   <label for="wednesday">
@@ -41,7 +41,7 @@
             </div>
             <div class="card col-3" onclick="toggleCheckbox('thursday')">
               <div class="card-body">
-                <p class="card-title">Jeudi</p>
+                <p class="card-title" style="color:black;">Jeudi</p>
                 <div class="checkbox-wrapper-10">
                   <input type="checkbox" value="thursday" id="thursday" name="days[]">
                   <label for="thursday">
@@ -56,7 +56,7 @@
           <div class="col d-flex justify-content-center" style="gap: 10px; color:white;height: 120px;">
             <div class="card col-3 " onclick="toggleCheckbox('friday')">
               <div class="card-body">
-                <p class="card-title">Vendredi</p>
+                <p class="card-title" style="color:black;">Vendredi</p>
                 <div class="checkbox-wrapper-10">
                   <input type="checkbox" value="friday" id="friday" name="days[]">
                   <label for="friday">
@@ -67,7 +67,7 @@
             </div>
             <div class="card col-3" onclick="toggleCheckbox('saturday')">
               <div class="card-body">
-                <p class="card-title">Samedi</p>
+                <p class="card-title" style="color:black;">Samedi</p>
                 <div class="checkbox-wrapper-10">
                   <input type="checkbox" value="saturday" id="saturday" name="days[]">
                   <label for="saturday">
@@ -78,7 +78,7 @@
             </div>
             <div class="card col-3" onclick="toggleCheckbox('sunday')">
               <div class="card-body">
-                <p class="card-title">Dimanche</p>
+                <p class="card-title" style="color:black;">Dimanche</p>
                 <div class="checkbox-wrapper-10">
                   <input type="checkbox" value="sunday" id="sunday" name="days[]">
                   <label for="sunday">

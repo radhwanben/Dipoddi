@@ -11,7 +11,7 @@
             <div class="card-body">
               <h5 class="card-title">Mobilité</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Mobilite" id="mobilite" name="mobilite">
+                <input type="radio" value="Mobilite" id="mobilite" name="target_kine">
                 <label for="mobilite">
                   <div class="tick_mark"></div>
                 </label>
@@ -25,7 +25,7 @@
             <div class="card-body">
               <h5 class="card-title">Renforcement</h5>
               <div class="radio-wrapper">
-                <input type="radio" value="Renfercement Kine" id="renforcementKine" name="renforcement">
+                <input type="radio" value="Renfercement Kine" id="renforcementKine" name="target_kine">
                 <label for="renforcementKine">
                   <div class="tick_mark"></div>
                 </label>
